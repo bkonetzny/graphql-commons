@@ -1,0 +1,11 @@
+{
+  "name": "kinoheld/graphql-commons",
+  "require": {
+    "webonyx/graphql-php": "^0.12.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "kinoheld\\GraphQLCommons\\": "src/"
+    }
+  }
+}
