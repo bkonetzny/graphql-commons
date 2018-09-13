@@ -1,5 +1,8 @@
 {
   "name": "kinoheld/graphql-commons",
+  "description": "Common helper classes for webonyx/graphql-php endpoints.",
+  "type": "library",
+  "license": "MIT",
   "require": {
     "webonyx/graphql-php": "^0.12.4"
   },
