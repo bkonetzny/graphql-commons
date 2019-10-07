@@ -2,7 +2,6 @@
 
 namespace kinoheld\GraphQLCommons\Type\Input;
 
-use GraphQL\Error\Error;
 use GraphQL\Type\Definition\InputObjectType;
 use GraphQL\Type\Definition\Type;
 use kinoheld\GraphQLCommons\Registry\TypeRegistry;

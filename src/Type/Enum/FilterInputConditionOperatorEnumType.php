@@ -7,10 +7,10 @@ use GraphQL\Type\Definition\EnumType;
 class FilterInputConditionOperatorEnumType extends EnumType
 {
 
-	const EQUALS = '=';
-	const NOT_EQUALS = '!=';
+	const EQUALS = 'EQUALS';
+	const NOT_EQUALS = 'NOT_EQUALS';
 	const IN = 'IN';
-	const NOT_IN = 'NOT IN';
+	const NOT_IN = 'NOT_IN';
 	const LIKE = 'LIKE';
 
 	/**
@@ -22,22 +22,22 @@ class FilterInputConditionOperatorEnumType extends EnumType
 	{
 		$config = [
 			'name' => 'FilterInputConditionOperatorEnum',
-			'description' => 'Order of result sorting.',
+			'description' => 'Condition Operator.',
 			'values' => [
 				self::EQUALS => [
-					'description' => 'Equals (=)',
+					'description' => 'Equals',
 				],
 				self::NOT_EQUALS => [
-					'description' => 'Not equals (!=)',
+					'description' => 'Not equals',
 				],
 				self::IN => [
-					'description' => 'In (IN)',
+					'description' => 'In',
 				],
 				self::NOT_IN => [
-					'description' => 'Not in (NOT IN)',
+					'description' => 'Not in',
 				],
 				self::LIKE => [
-					'description' => 'Like (LIKE)',
+					'description' => 'Like',
 				],
 			],
 		];
