@@ -12,6 +12,8 @@ class FilterInputConditionOperatorEnumType extends EnumType
 	const IN = 'IN';
 	const NOT_IN = 'NOT_IN';
 	const LIKE = 'LIKE';
+	const STARTS_WITH = 'STARTS_WITH';
+	const ENDS_WITH = 'ENDS_WITH';
 
 	/**
 	 * Initialize the EnumType.
@@ -25,19 +27,25 @@ class FilterInputConditionOperatorEnumType extends EnumType
 			'description' => 'Condition Operator.',
 			'values' => [
 				self::EQUALS => [
-					'description' => 'Equals',
+					'description' => 'Equals (property = value)',
 				],
 				self::NOT_EQUALS => [
-					'description' => 'Not equals',
+					'description' => 'Not equals (property != value)',
 				],
 				self::IN => [
-					'description' => 'In',
+					'description' => 'In (property IN (value))',
 				],
 				self::NOT_IN => [
-					'description' => 'Not in',
+					'description' => 'Not in (property NOT IN (value))',
 				],
 				self::LIKE => [
-					'description' => 'Like',
+					'description' => 'Like (property LIKE %value%)',
+				],
+				self::STARTS_WITH => [
+					'description' => 'Starts with (property LIKE value%)',
+				],
+				self::ENDS_WITH => [
+					'description' => 'Ends with (property LIKE %value)',
 				],
 			],
 		];
