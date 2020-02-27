@@ -14,22 +14,26 @@ class FilterInputType extends InputObjectType
 	 *
 	 * @param array $config
 	 */
-	public function __construct(array $config = array())
+	public function __construct(array $config = [])
 	{
 		$config['name'] = 'FilterInput';
 
-		$config['fields']['conditions'] = array(
+		$config['fields']['conditions'] = [
 			'type' => Type::listOf(TypeRegistry::getType('kinoheld\GraphQLCommons\Type\Input\FilterInputConditionType')),
 			'description' => 'Conditions',
-		);
-		$config['fields']['limit'] = array(
-			'type' => Type::int(),
-			'description' => 'Limit',
-		);
-		$config['fields']['order'] = array(
+        ];
+        $config['fields']['limit'] = [
+            'type' => Type::int(),
+            'description' => 'Limit',
+        ];
+        $config['fields']['offset'] = [
+            'type' => Type::int(),
+            'description' => 'Offset',
+        ];
+		$config['fields']['order'] = [
 			'type' => Type::listOf(TypeRegistry::getType('kinoheld\GraphQLCommons\Type\Input\FilterInputOrderType')),
 			'description' => 'Order',
-		);
+        ];
 
 		parent::__construct($config);
 	}
